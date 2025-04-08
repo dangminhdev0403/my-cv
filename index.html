@@ -55,13 +55,6 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       }
 
-      .typing-text {
-        overflow: hidden;
-        white-space: nowrap;
-        margin: 0;
-        letter-spacing: 0.15em;
-      }
-
       .name {
         font-size: 3em;
         font-weight: 700;
@@ -212,48 +205,6 @@
         }
       }
 
-      .typing-animation {
-        display: inline-block; /* Đảm bảo văn bản hiển thị đúng */
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 2px solid #fff;
-        animation: typing 3.5s steps(40, end) forwards,
-          blink-caret 0.75s step-end 4;
-      }
-
-      .intro-section .typing-animation:nth-child(1) {
-        animation-delay: 0s;
-      }
-      .intro-section .typing-animation:nth-child(2) {
-        animation-delay: 1s;
-      }
-      .intro-section .typing-animation:nth-child(3) {
-        animation-delay: 2s;
-      }
-      .section .typing-animation {
-        animation-delay: 0s;
-      }
-
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-          border-right: none;
-        } /* Tắt border-right hoàn toàn */
-      }
-
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: #fff;
-        }
-      }
-
       @media (max-width: 768px) {
         .header {
           grid-template-columns: 1fr;
@@ -270,6 +221,18 @@
           height: 150px;
           margin: 0 auto;
         }
+
+        .intro-section {
+          width: 100%;
+        }
+
+        .name {
+          font-size: 2em;
+        }
+
+        .title {
+          font-size: 1.2em;
+        }
       }
     </style>
   </head>
@@ -284,9 +247,9 @@
           />
         </div>
         <div class="intro-section">
-          <h1 class="name typing-animation">John Doe</h1>
-          <p class="title typing-animation">Senior Software Engineer</p>
-          <p class="typing-animation" style="color: #e1bee7; line-height: 1.6">
+          <h1 class="name">John Doe</h1>
+          <p class="title">Senior Software Engineer</p>
+          <p style="color: #e1bee7; line-height: 1.6">
             Passionate developer with 5+ years of experience in creating
             innovative solutions.
           </p>
@@ -294,7 +257,7 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title typing-animation">Professional Skills</h2>
+        <h2 class="section-title">Professional Skills</h2>
         <div class="skills-grid">
           <div class="skill-item">
             <p class="skill-name">Frontend Development</p>
@@ -324,7 +287,7 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title typing-animation">Work Experience</h2>
+        <h2 class="section-title">Work Experience</h2>
         <div class="experience-item">
           <h3 class="experience-title">Senior Software Engineer</h3>
           <p class="experience-date">2020 - Present | Tech Solutions Inc.</p>
@@ -340,7 +303,7 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title typing-animation">Education</h2>
+        <h2 class="section-title">Education</h2>
         <div class="experience-item">
           <h3 class="experience-title">Master in Computer Science</h3>
           <p class="experience-date">2016 - 2018 | Top University</p>
@@ -349,7 +312,7 @@
       </div>
 
       <div class="section">
-        <h2 class="section-title typing-animation">Contact Information</h2>
+        <h2 class="section-title">Contact Information</h2>
         <div class="contact-grid">
           <div class="contact-item">
             <span>📧</span>
